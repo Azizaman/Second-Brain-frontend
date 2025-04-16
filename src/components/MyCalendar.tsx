@@ -21,7 +21,7 @@ const MyCalendar: React.FC = () => {
       const token = localStorage.getItem("authToken");
       if (!token) throw new Error("User not logged in");
 
-      const response = await axios.get("https://second-brain-backend-bw9v.onrender.com/events", {
+      const response = await axios.get("https://second-brain-backend-sugh.onrender.com/events", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -50,7 +50,7 @@ const MyCalendar: React.FC = () => {
       const token = localStorage.getItem("authToken");
       if (!token) throw new Error("User not logged in");
 
-      const response = await axios.post("https://second-brain-backend-bw9v.onrender.com/events", newEvent, {
+      const response = await axios.post("https://second-brain-backend-sugh.onrender.com/events", newEvent, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -65,7 +65,7 @@ const MyCalendar: React.FC = () => {
       const token = localStorage.getItem("authToken");
       if (!token) throw new Error("User not logged in");
 
-      await axios.delete(`https://second-brain-backend-bw9v.onrender.com/events/${id}`, {
+      await axios.delete(`https://second-brain-backend-sugh.onrender.com/events/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

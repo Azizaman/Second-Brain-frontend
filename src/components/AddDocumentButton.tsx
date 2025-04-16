@@ -28,7 +28,7 @@ const AddDocumentButton = () => {
           setError("No auth token found.");
           return;
         }
-        const response = await axios.post('https://second-brain-backend-bw9v.onrender.com/upload', formData, {
+        const response = await axios.post('https://second-brain-backend-sugh.onrender.com/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             Authorization:`Bearer ${token}`

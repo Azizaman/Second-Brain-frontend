@@ -27,7 +27,7 @@ export const DocumentCard: React.FC = () => {
         return;
       }
 
-      const response = await axios.get("https://second-brain-backend-bw9v.onrender.com/documents", {
+      const response = await axios.get("https://second-brain-backend-sugh.onrender.com/documents", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -54,7 +54,7 @@ export const DocumentCard: React.FC = () => {
       }
 
       const response = await axios.get(
-        `https://second-brain-backend-bw9v.onrender.com/documents/${documentId}`,
+        `https://second-brain-backend-sugh.onrender.com/documents/${documentId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
