@@ -9,11 +9,10 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ documentId }) => {
   const [pdfUrl, setPdfUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    // Fetch the PDF data from the server using axios
     axios.get(`https://second-brain-backend-bw9v.onrender.com/documents/${documentId}`, { responseType: 'blob' })
       .then((response) => {
-        const url = URL.createObjectURL(response.data); // Convert the blob into a URL
-        setPdfUrl(url); // Set the PDF URL to the state
+        const url = URL.createObjectURL(response.data);
+        setPdfUrl(url);
       })
       .catch((error) => {
         console.error('Error fetching PDF:', error);

@@ -25,7 +25,14 @@ const MyCalendar: React.FC = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
 
-      const formattedEvents: Event[] = response.data.map((event: any) => ({
+      interface ApiEvent {
+        _id: string;
+        title: string;
+        start: string;
+        end: string;
+      }
+
+      const formattedEvents: Event[] = response.data.map((event: ApiEvent) => ({
         id: event._id,
         title: event.title,
         start: new Date(event.start),
@@ -102,19 +109,20 @@ const MyCalendar: React.FC = () => {
         User Schedule Manager
       </h1>
       <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <Calendar
-          localizer={localizer}
-          events={events}
-          startAccessor="start"
-          endAccessor="end"
-          selectable
-          onSelectSlot={handleSelectSlot}
-          onSelectEvent={handleSelectEvent}
-          style={{ height: "80vh" }}
-          views={["month", "week", "day"]}
-          popup
-          className="custom-calendar"
-        />
+        <div style={{ height: "80vh" }}>
+          <Calendar
+            localizer={localizer}
+            events={events}
+            startAccessor="start"
+            endAccessor="end"
+            selectable
+            onSelectSlot={handleSelectSlot}
+            onSelectEvent={handleSelectEvent}
+            views={["month", "week", "day"]}
+            popup
+            className="custom-calendar"
+          />
+        </div>
       </div>
     </div>
   );
