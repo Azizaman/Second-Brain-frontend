@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --radius: 0.5rem
+  ;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%}
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%
+  }
+}
+
+
+/* Calendar container styling */
+.calendar {
+  color: #ffffff; /* Ensure the text color is white */
+}
+
+/* Event styles for better visibility in dark theme */
+.rbc-event {
+  background-color: #1e3a8a !important; /* Dark blue background for events */
+  color: #ffffff !important; /* White text for events */
+  border: none !important; /* Remove borders for a cleaner look */
+  padding: 2px 6px; /* Add some padding for better readability */
+  border-radius: 4px; /* Rounded corners for a modern look */
+}
+
+/* Hover effect for events */
+.rbc-event:hover {
+  background-color: #233866 !important; /* Slightly lighter blue on hover */
+  cursor: pointer;
+}
+
+/* Selected event styling */
+.rbc-selected {
+  background-color: #3b82f6 !important; /* Bright blue for selected events */
+  color: #ffffff !important;
+}
+
+/* Change the color of the slots in dark mode */
+.rbc-day-slot .rbc-time-slot {
+  background-color: #1f2937; /* Dark background for slots */
+}
+
+/* Current day highlight */
+.rbc-today {
+  background-color: rgba(37, 99, 235, 0.3) !important; /* Light blue highlight */
+}
