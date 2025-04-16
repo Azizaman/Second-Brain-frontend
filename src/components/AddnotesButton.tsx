@@ -16,7 +16,7 @@ export function AddnotesButton() {
 
       try {
         const token=await localStorage.getItem('authToken');
-        const response = await axios.post('https://second-brain-backend-sugh.onrender.com/notes', {
+        const response = await axios.post('https://second-brain-backend-tdy4.onrender.com/notes', {
             title,
             content
         },{

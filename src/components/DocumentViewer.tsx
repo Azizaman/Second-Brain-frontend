@@ -9,7 +9,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ documentId }) => {
   const [pdfUrl, setPdfUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    axios.get(`https://second-brain-backend-sugh.onrender.com/documents/${documentId}`, { responseType: 'blob' })
+    axios.get(`https://second-brain-backend-tdy4.onrender.com/documents/${documentId}`, { responseType: 'blob' })
       .then((response) => {
         const url = URL.createObjectURL(response.data);
         setPdfUrl(url);

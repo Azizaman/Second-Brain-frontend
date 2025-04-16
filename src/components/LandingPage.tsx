@@ -29,7 +29,7 @@ const LandingPage: React.FC = () => {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               try {
-                const res = await fetch("https://second-brain-backend-sugh.onrender.com/login", {
+                const res = await fetch("https://second-brain-backend-tdy4.onrender.com/login", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",

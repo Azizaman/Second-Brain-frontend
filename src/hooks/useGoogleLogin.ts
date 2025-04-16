@@ -20,7 +20,7 @@ export const useCustomGoogleLogin = () => {
           return;
         }
 
-        const loginRes = await axios.post("https://second-brain-backend-sugh.onrender.com/login", {
+        const loginRes = await axios.post("https://second-brain-backend-tdy4.onrender.com/login", {
           token: idToken, // Send ID token
         });
 
